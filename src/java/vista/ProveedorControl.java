@@ -9,10 +9,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import servicio.ProveedorServicio;
+import servicio.ProveedorServicioImp;
 
 @WebServlet(name = "ProveedorControl", urlPatterns = {"/ProveedorControl"})
 public class ProveedorControl extends HttpServlet {
 
+    private ProveedorServicio proSer;
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
@@ -22,14 +25,15 @@ public class ProveedorControl extends HttpServlet {
         String usu = request.getParameter("usu");
         String pas = request.getParameter("pas");
         
-        String msg = ProveedorServicio.grabar(cod, nom, dir, usu, pas);
+        proSer = new ProveedorServicioImp();
+        String msg = proSer.grabar(cod, nom, dir, usu, pas);
         
         if(msg==null){
             msg = "Proveedor Grabado";
         }
         
         request.getSession().setAttribute("msg", msg);
-        response.sendRedirect("Admin.jsp");
+        response.sendRedirect("Login.jsp");
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

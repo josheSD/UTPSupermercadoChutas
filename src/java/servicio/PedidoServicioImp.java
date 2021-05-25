@@ -15,7 +15,7 @@ public class PedidoServicioImp implements PedidoServicio {
     @Override
     public Object[] nuevoPedido(String cod) {
         ped = new Pedido();
-        ped.setNum("P00004");
+        ped.setNum("P00005");
         ped.setFec(getFec());
         ped.setEmp(verEmpleado(cod));
         return verPedido();

@@ -252,12 +252,12 @@
                                     </a>
                                 </div>
                                 <div class="modules__sub">
-                                    <a>
+                                    <a href="ArticuloRegistro.jsp">
                                         <span>
                                             <i class="fab fa-shirtsinbulk"></i>
                                         </span>
                                         <span class="module-parrafo">
-                                            Buscar
+                                            Crear
                                         </span>
                                     </a>
                                     <a>
@@ -265,7 +265,9 @@
                                             <i class="fab fa-shirtsinbulk"></i>
                                         </span>
                                         <span class="module-parrafo">
-                                            Listar
+                                            <form action="ArticuloControl" method="post" >
+                                                <input type="submit" class="btn btn-link p-0 text-dark" name="acc" value="Listar"/>
+                                            </form>
                                         </span>
                                     </a>
                                 </div>
@@ -280,7 +282,7 @@
                                             <img src="./assets/img/sidebar/12-settings.svg" alt="modulo">
                                         </span>
                                         <span class="module-parrafo">
-                                            Procesos
+                                            Nota Pedido
                                         </span>
                                     </a>
                                 </div>
@@ -290,18 +292,39 @@
                                             <i class="fab fa-shirtsinbulk"></i>
                                         </span>
                                         <span class="module-parrafo">
-                                            <form action="PedidoControl">
+                                            <form action="PedidoControl" method="post" >
                                                 <input type="hidden" name="cod" value="<%= fil[0] %>" >
                                                 <input type="submit" class="btn btn-link p-0 text-dark" name="acc" value="Nuevo"/>
                                             </form>
                                         </span>
                                     </a>
+                                </div>
+
+                            </section>
+                                                
+                            
+                            <section class="modules" id="module-compra" >
+
+                                <div class="modules__main">
+                                    <a href="javascript:void(0)">
+                                        <span>
+                                            <img src="./assets/img/sidebar/12-settings.svg" alt="modulo">
+                                        </span>
+                                        <span class="module-parrafo">
+                                            Orden Compra
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="modules__sub">
                                     <a>
                                         <span>
                                             <i class="fab fa-shirtsinbulk"></i>
                                         </span>
                                         <span class="module-parrafo">
-                                            Listar
+                                            <form action="CompraControl" method="post">
+                                                <input type="hidden" name="cod" value="<%= fil[0] %>" >
+                                                <input type="submit" class="btn btn-link p-0 text-dark" name="acc" value="Nuevo"/>
+                                            </form>
                                         </span>
                                     </a>
                                 </div>

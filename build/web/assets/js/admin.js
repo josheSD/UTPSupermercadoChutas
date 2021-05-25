@@ -137,6 +137,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
     });
     
+    document.getElementById('module-compra').addEventListener("click",() =>{
+        
+        document.querySelectorAll('.modules').forEach((module) =>{
+            if('module-compra' != module.id){
+                module.classList.remove('active');   
+            }
+        });
+        
+        document.getElementById('module-compra').classList.toggle('active');
+        
+    });
+    
 });
 
 
