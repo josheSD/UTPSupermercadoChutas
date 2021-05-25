@@ -12,10 +12,12 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
         <script src="https://kit.fontawesome.com/2fb25d77eb.js" crossorigin="anonymous"></script>
         
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        
+        <!-- BOOSTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
     </head>
     <body class="theme-light" id="body">
         
@@ -64,41 +66,51 @@
                         <form method="post" action="ClienteControl" >
                             <div class="container">
                                 <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="cod" name="cod" type="text" class="validate">
-                                        <label for="cod">Codigo</label>
+                                    <div class="col-12 px-0">
+                                        <div class="form-group">
+                                            <label class="formGroupExampleInput" for="cod">Codigo</label>
+                                            <input id="cod" name="cod" type="text" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="nom" name="nom" type="text" class="validate">
-                                        <label for="nom">Nombre</label>
+                                    <div class="col-12 px-0">
+                                        <div class="form-group">
+                                            <label class="formGroupExampleInput" for="nom">Nombre</label>
+                                            <input id="nom" name="nom" type="text" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="dir" name="dir" type="text" class="validate">
-                                        <label for="dir">Dirección</label>
+                                    <div class="col-12 px-0">
+                                        <div class="form-group">
+                                            <label class="formGroupExampleInput" for="dir">Dirección</label>
+                                            <input id="dir" name="dir" type="text" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="usu" name="usu" type="text" class="validate">
-                                        <label for="usu">Usuario</label>
+                                    <div class="col-12 px-0">
+                                        <div class="form-group">
+                                            <label class="formGroupExampleInput" for="usu">Usuario</label>
+                                            <input id="usu" name="usu" type="text" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="pas" name="pas" type="password" class="validate">
-                                        <label for="pas">Password</label>
+                                    <div class="col-12 px-0">
+                                        <div class="form-group">
+                                            <label class="formGroupExampleInput" for="pas">Password</label>
+                                            <input id="pas" name="pas" type="password" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <button type="submit" class="btn-session" id="btn-session">
-                                <p>Crear</p>
-                            </button>
-                            <a href="./Login.jsp" class="aviso-regitro">Volver</a>
+                            <input type="submit" class="btn btn-primary" placeholder="Crear" name="acc" value="Grabar" />
+                            
+                            
+                            <a href="./Login.jsp" class="aviso-regitro mt-2">Volver</a>
 
                         </form>
                     </section>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="2">
         <file>
             <url>web/Portal.jsp</url>
             <bookmark id="1">
@@ -9,11 +9,25 @@
                 <key/>
             </bookmark>
         </file>
+        <file>
+            <url>src/java/negocio/Pedido.java</url>
+            <bookmark id="2">
+                <name/>
+                <line>35</line>
+                <key/>
+            </bookmark>
+        </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/web/EmpleadoRegistro.jsp</file>
+            <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/web/ArticuloListaGui.jsp</file>
+            <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/src/java/persistencia/PedidoDaoImp.java</file>
+            <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/src/java/vista/PedidoControl.java</file>
+            <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/src/java/servicio/PedidoServicioImp.java</file>
+            <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/src/java/servicio/PedidoServicio.java</file>
             <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/web/Admin.jsp</file>
+            <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/web/PedidoGui.jsp</file>
+            <file>file:/D:/Jose/Studying/Proyectos/SupermercadoChutas/src/java/persistencia/PedidoDao.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,21 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package persistencia;
 
+import java.util.List;
 import negocio.Empleado;
 
-/**
- *
- * @author Jose
- */
-public class EmpleadoDao {
-
-    public static String grabar(Empleado emp){
-        String sql = "INSERT INTO empleado VALUES('"+ emp.getCod()+"','"+emp.getNom()+"','"+emp.getTip()+"','"+emp.getUsu()+"','"+emp.getPas()+"')";
-        String msg = Operacion.ejecutar(sql);
-        return msg;
-    }
+public interface EmpleadoDao {
+    public String grabar(Empleado emp);
+    public Empleado validar(String usu, String pas);
+    public Empleado buscar(String cod);
+    public String actualizar(String tip,String pas,String cod);
+    public String eliminar(String cod);
+    public List listar();
 }

@@ -12,11 +12,11 @@
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>
         <script src="https://kit.fontawesome.com/2fb25d77eb.js" crossorigin="anonymous"></script>
         
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        
+        <!-- BOOSTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
     </head>
     <body class="theme-light" id="body">
         
@@ -62,30 +62,32 @@
 
                     <section class="l-login__content">
 
-                        <form method="post" action="LoginControl">
+                        <form method="post" action="EmpleadoControl">
 
                             <div class="container">
                                 <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="user" type="text" class="validate">
-                                        <label for="user">Usuario</label>
+                                    <div class="col-12 px-0">
+                                        <div class="form-group">
+                                            <label class="formGroupExampleInput" for="user">Usuario</label>
+                                            <input id="user" name="usu" type="text" class="form-control">
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="input-field col s12">
-                                        <input id="password" type="password" class="validate">
-                                        <label for="password">Contraseña</label>
+                                    <div class="col-12 px-0">
+                                        <div class="form-group">
+                                            <label class="formGroupExampleInput" for="password">Contraseña</label>
+                                            <input id="password" name="pas" type="password" class="form-control">
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             
-                            <button type="submit" class="btn-session" id="btn-session">
-                                <p>Inicia sesión</p>
-                            </button>
+                            <input class="btn btn-primary" type="submit"  placeholder="Inicia sesión" name="acc" value="Iniciar Sesion" />
                             
-                            <a href="./EmpleadoRegistro.jsp" class="aviso-regitro">Regístrar Empleado</a>
-                            <a href="./ClienteRegistro.jsp" class="aviso-regitro">Regístrar Cliente</a>
-                            <a href="./ProveedorRegistro.jsp" class="aviso-regitro">Regístrar Proveedor</a>
+                            <div class="mt-2 d-flex flex-column">
+                                <a href="./EmpleadoRegistro.jsp" class="aviso-regitro">Regístrar Empleado</a>
+                                <a href="./ClienteRegistro.jsp" class="aviso-regitro my-2">Regístrar Cliente</a>
+                                <a href="./ProveedorRegistro.jsp" class="aviso-regitro">Regístrar Proveedor</a>
+                            </div>
                             
 
                         </form>

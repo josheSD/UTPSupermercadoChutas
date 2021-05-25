@@ -75,7 +75,68 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
     
     });
-
+    
+    // MODULOS SIDEBAR
+    document.getElementById('module-articulo').addEventListener("click",() =>{
+        
+        document.querySelectorAll('.modules').forEach((module) =>{
+            if('module-articulo' != module.id){
+                module.classList.remove('active');   
+            }
+        });
+        
+        document.getElementById('module-articulo').classList.toggle('active');
+        
+    });
+    
+    document.getElementById('module-proveedor').addEventListener("click",() =>{
+        
+        document.querySelectorAll('.modules').forEach((module) =>{
+            if('module-proveedor' != module.id){
+                module.classList.remove('active');   
+            }
+        });
+        
+        document.getElementById('module-proveedor').classList.toggle('active');
+        
+    });
+    
+    document.getElementById('module-cliente').addEventListener("click",() =>{
+        
+        document.querySelectorAll('.modules').forEach((module) =>{
+            if('module-cliente' != module.id){
+                module.classList.remove('active');   
+            }
+        });
+        
+        document.getElementById('module-cliente').classList.toggle('active');
+        
+    });
+    
+    document.getElementById('module-empleado').addEventListener("click",() =>{
+        
+        document.querySelectorAll('.modules').forEach((module) =>{
+            if('module-empleado' != module.id){
+                module.classList.remove('active');   
+            }
+        });
+        
+        document.getElementById('module-empleado').classList.toggle('active');
+        
+    });
+    
+    document.getElementById('module-pedido').addEventListener("click",() =>{
+        
+        document.querySelectorAll('.modules').forEach((module) =>{
+            if('module-pedido' != module.id){
+                module.classList.remove('active');   
+            }
+        });
+        
+        document.getElementById('module-pedido').classList.toggle('active');
+        
+    });
+    
 });
 
 

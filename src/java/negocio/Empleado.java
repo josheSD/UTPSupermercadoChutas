@@ -13,6 +13,29 @@ public class Empleado {
         this.pas = pas;
     }   
 
+    public Empleado() {
+    }
+
+    public void setCod(String cod) {
+        this.cod = cod;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public void setTip(String tip) {
+        this.tip = tip;
+    }
+
+    public void setUsu(String usu) {
+        this.usu = usu;
+    }
+
+    public void setPas(String pas) {
+        this.pas = pas;
+    }
+
     public String getCod() {
         return cod;
     }
