@@ -409,14 +409,14 @@ public final class ArticuloRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                    <section class=\"l-articulo__content\">\n");
       out.write("\n");
       out.write("                        <form method=\"post\" action=\"ArticuloControl\" >\n");
-      out.write("                            <div class=\"container\">\n");
+      out.write("                            <div class=\"container-fluid\">\n");
       out.write("                                <div class=\"row\">\n");
-      out.write("                                    <div class=\"col-12 px-0\">\n");
+      out.write("                                    <div class=\"col-12 pt-3 pb-2\">\n");
       out.write("                                        <h4> Registrar Articulo </h4>\n");
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"row\">\n");
-      out.write("                                    <div class=\"col-12 px-0\">\n");
+      out.write("                                    <div class=\"col-md-2 px-3\">\n");
       out.write("                                        <div class=\"form-group\">\n");
       out.write("                                            <label class=\"formGroupExampleInput\" for=\"cod\">Codigo</label>\n");
       out.write("                                            <input id=\"cod\" name=\"cod\" type=\"text\" class=\"form-control\">\n");
@@ -424,7 +424,7 @@ public final class ArticuloRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"row\">\n");
-      out.write("                                    <div class=\"col-12 px-0\">\n");
+      out.write("                                    <div class=\"col-md-2 px-3\">\n");
       out.write("                                        <div class=\"form-group\">\n");
       out.write("                                            <label class=\"formGroupExampleInput\" for=\"nom\">Nombre</label>\n");
       out.write("                                            <input id=\"nom\" name=\"nom\" type=\"text\" class=\"form-control\">\n");
@@ -432,7 +432,7 @@ public final class ArticuloRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"row\">\n");
-      out.write("                                    <div class=\"col-12 px-0\">\n");
+      out.write("                                    <div class=\"col-md-2 px-3\">\n");
       out.write("                                        <div class=\"form-group\">\n");
       out.write("                                            <label class=\"formGroupExampleInput\" for=\"pre\">Precio</label>\n");
       out.write("                                            <input id=\"pre\" name=\"pre\" type=\"text\" class=\"form-control\">\n");
@@ -440,7 +440,7 @@ public final class ArticuloRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"row\">\n");
-      out.write("                                    <div class=\"col-12 px-0\">\n");
+      out.write("                                    <div class=\"col-md-2 px-3\">\n");
       out.write("                                        <div class=\"form-group\">\n");
       out.write("                                            <label class=\"formGroupExampleInput\" for=\"sto\">Stock</label>\n");
       out.write("                                            <input id=\"sto\" name=\"sto\" type=\"text\" class=\"form-control\">\n");
@@ -448,8 +448,8 @@ public final class ArticuloRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"row\">\n");
-      out.write("                                    <div class=\"col-12 px-0\">\n");
-      out.write("                                        <input type=\"submit\" class=\"btn btn-primary\" placeholder=\"Crear\" name=\"acc\" value=\"Grabar\" />\n");
+      out.write("                                    <div class=\"col-md-2 px-3\">\n");
+      out.write("                                        <input type=\"submit\" class=\"btn btn-primary mt-2\" placeholder=\"Crear\" name=\"acc\" value=\"Grabar\" />\n");
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
       out.write("                            </div>\n");

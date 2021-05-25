@@ -69,7 +69,7 @@
                                     <div class="col-12 px-0">
                                         <div class="form-group">
                                             <label class="formGroupExampleInput" for="user">Usuario</label>
-                                            <input id="user" name="usu" type="text" class="form-control">
+                                            <input placeholder="E001" id="user" name="usu" type="text" class="form-control">
                                         </div>
                                     </div>
                                     <div class="col-12 px-0">

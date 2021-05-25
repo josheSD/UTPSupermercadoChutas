@@ -354,28 +354,40 @@
             <section class="l-main" id="main">
                 <main class="l-empleado">
 
-                    <p> Editar Empleado </p>
-                    <% Object[]empleadoDB = (Object[])session.getAttribute("empleadoDB"); %>
-                    <table>
-                        <tr>
-                            <td>
-                                Codigo
-                                <input type="text" name="cod" size="20" value="<%= empleadoDB[0] %>" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Nombre
-                                <input type="text" name="nom" size="20" value="<%= empleadoDB[1] %>" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                Tipo
-                                <input type="text" name="tip" size="20" value="<%= empleadoDB[2] %>" />
-                            </td>
-                        </tr>
-                    </table>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 py-3">
+                                <p> Editar Empleado </p>
+                                <% Object[]empleadoDB = (Object[])session.getAttribute("empleadoDB"); %>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                                <label class="formGroupExampleInput">Codigo</label>
+                                                <input type="text" class="form-control" name="cod" size="20" value="<%= empleadoDB[0] %>" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                            <label class="formGroupExampleInput">Nombre</label>
+                                            <input type="text" class="form-control" name="nom" size="20" value="<%= empleadoDB[1] %>" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="form-group">
+                                            <label class="formGroupExampleInput">Tipo</label>
+                                            <input type="text" class="form-control" name="tip" size="20" value="<%= empleadoDB[2] %>" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                     
                 </main>
 

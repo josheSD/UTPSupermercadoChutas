@@ -21,7 +21,7 @@ public class CompraServicioImp implements CompraServicio{
     @Override
     public Object[] nuevoPedido(String cod) {
         com = new Compra();
-        com.setNum("O00001");
+        com.setNum("O00004");
         com.setFec(getFec());
         com.setEmp(verEmpleado(cod));
         return verCompra();

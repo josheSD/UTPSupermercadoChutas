@@ -355,29 +355,38 @@
             <section class="l-main" id="main">
                 <main class="l-empleado">
 
-                    <p> Lista de Empleado </p>
-                    <% List lis=(List)session.getAttribute("lis"); %>
-                    
-                    <table>
-                        <tr>
-                            <td>Codigo </td>
-                            <td>Nombre </td>
-                            <td>Tipo</td>
-                            <td>Usuario</td>
-                            <td>Password</td>
-                        </tr>
-                        <% for(int i=1; i<lis.size();i++){ %>
-                        <% Object[]f = (Object[])lis.get(i); %>
-                        <tr>
-                            <td><input type="text" name="cod" size="5" value="<%= f[0] %>"> </td>
-                            <td><input type="text" name="nom" size="5" value="<%= f[1] %>"> </td>
-                            <td><input type="text" name="tip" size="5" value="<%= f[2] %>"></td>
-                            <td><input type="text" name="usu" size="5" value="<%= f[3] %>"></td>
-                            <td><input type="text" name="pas" size="5" value="<%= f[4] %>"></td>
-                        </tr>
-                        <% } %>
-                    </table>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-5 py-3">
+                                
+                                <p> Lista de Empleado </p>
+                                <% List lis=(List)session.getAttribute("lis"); %>
 
+                                <table class="table table-hover">
+                                    <tr class="table-primary">
+                                        <th>Codigo </th>
+                                        <th>Nombre </th>
+                                        <th>Tipo</th>
+                                        <th>Usuario</th>
+                                        <th>Password</th>
+                                    </tr>
+                                    <% for(int i=1; i<lis.size();i++){ %>
+                                    <% Object[]f = (Object[])lis.get(i); %>
+                                    <tr>
+                                        <td><input type="text" name="cod" size="5" value="<%= f[0] %>"> </td>
+                                        <td><input type="text" name="nom" size="5" value="<%= f[1] %>"> </td>
+                                        <td><input type="text" name="tip" size="5" value="<%= f[2] %>"></td>
+                                        <td><input type="text" name="usu" size="5" value="<%= f[3] %>"></td>
+                                        <td><input type="text" name="pas" size="5" value="<%= f[4] %>"></td>
+                                    </tr>
+                                    <% } %>
+                                </table>
+                                   
+                            </div>
+                        </div>
+
+                    </div>
+                    
                 </main>
 
             </section>

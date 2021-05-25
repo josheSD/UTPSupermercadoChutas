@@ -358,118 +358,128 @@
                 <main class="l-compra-lista">
                     
                     
-                    <div>
-                        <p>Orden Compra</p>
-                        <% CompraPresentador comPre = (CompraPresentador) session.getAttribute("comPre"); %>
-                        <%! String tot; %>
-                        <table>
-                            <% Object[]f1 = comPre.getFil(); %>
-                            <% tot=f1[2].toString(); %>
-                            <tr>
-                                <td>
-                                    Numero
-                                </td>
-                                <td>
-                                    <input type="text" size="10" value='<%= f1[0] %>' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Fecha
-                                </td>
-                                <td>
-                                    <input type="text" size="10" value='<%= f1[1] %>' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Proveedor
-                                </td>
-                                <td>
-                                    <input type="text" size="10" value='<%= f1[3] %>' />
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-7 py-3">
+                    
+                                    <p class="h5 mb-3">Orden Compra</p>
+                                    <% CompraPresentador comPre = (CompraPresentador) session.getAttribute("comPre"); %>
+                                    <%! String tot; %>
+                                    <table>
+                                        <% Object[]f1 = comPre.getFil(); %>
+                                        <% tot=f1[2].toString(); %>
+                                        <tr>
+                                            <td>
+                                                Numero
+                                            </td>
+                                            <td>
+                                                <input class="d-inline-block ml-3 mb-3" type="text" size="10" value='<%= f1[0] %>' />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Fecha
+                                            </td>
+                                            <td>
+                                                <input class="d-inline-block ml-3 mb-3" type="text" size="10" value='<%= f1[1] %>' />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Proveedor
+                                            </td>
+                                            <td>
+                                                <input class="d-inline-block ml-3" type="text" size="10" value='<%= f1[3] %>' />
+                                            </td>
+                                        </tr>
+                                    </table>
 
-                        <table>
-                            <% Object[]f3 = comPre.getFil2(); %>
-                            <tr>
-                                <form action="CompraControl" method="post">
-                                    <td>Ingrese codigo proveedor<td>
-                                    <td><input type="text" name="cod" size="10" value="<%= f3[0] %>"/></td>
-                                    <td><input type="submit" name="acc" value="Buscar" /><td>
-                                    <td>Proveedor nombre</td>
-                                    <td><input type="text" name="nom" size="30" value="<%= f3[1] %>" /></td>
-                                </form>
-                            </tr>
-                        </table>
+                                    <table class="mt-3">
+                                        <% Object[]f3 = comPre.getFil2(); %>
+                                        <tr>
+                                            <form action="CompraControl" method="post">
+                                                <td>Ingrese codigo proveedor<td>
+                                                <td><input class="ml-2" placeholder="P001" type="text" name="cod" size="10" value="<%= f3[0] %>"/></td>
+                                                <td><input class="d-inline-block btn mx-3 btn-primary" type="submit" name="acc" value="Buscar" /><td>
+                                                <td>Proveedor nombre</td>
+                                                <td><input class="ml-2" type="text" name="nom" size="30" value="<%= f3[1] %>" /></td>
+                                            </form>
+                                        </tr>
+                                    </table>
 
-                        <table>
-                            <tr>
-                                <td>
-                                    Codigo
-                                </td>
-                                <td>
-                                    Nombre
-                                </td>
-                                <td>
-                                    Precio
-                                </td>
-                                <td>
-                                    Cantidad
-                                </td>
-                                <td>
-                                    Importe
-                                </td>
-                                <td></td>
-                            </tr>
-                            <% for(int i=0;i<comPre.getLis().size();i++){ %>
-                            <% Object[] f2= (Object[])comPre.getLis().get(i); %>
-                            <% tot=f2[5].toString(); %>
-                            <tr>
-                                <form action="CompraControl" method="post">
-                                    <td>
-                                        <input type="text" name="cod" size="5" value="<%= f2[0] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="10" value="<%= f2[1] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" value="<%= f2[2] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" value="<%= f2[3] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" value="<%= f2[4] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="submit" name="acc" value="Quitar" />
-                                    </td>
-                                </form>
-                            </tr>
-                            <% } %>
-                        </table>
+                                    <table class="table table-hover mt-4 mb-3">
+                                        <tr class="table-primary">
+                                            <td>
+                                                Codigo
+                                            </td>
+                                            <td>
+                                                Nombre
+                                            </td>
+                                            <td>
+                                                Precio
+                                            </td>
+                                            <td>
+                                                Cantidad
+                                            </td>
+                                            <td>
+                                                Importe
+                                            </td>
+                                            <td></td>
+                                        </tr>
+                                        <% for(int i=0;i<comPre.getLis().size();i++){ %>
+                                        <% Object[] f2= (Object[])comPre.getLis().get(i); %>
+                                        <% tot=f2[5].toString(); %>
+                                        <tr>
+                                            <form action="CompraControl" method="post">
+                                                <td>
+                                                    <input type="text" name="cod" size="5" value="<%= f2[0] %>" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" size="10" value="<%= f2[1] %>" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" size="5" value="<%= f2[2] %>" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" size="5" value="<%= f2[3] %>" />
+                                                </td>
+                                                <td>
+                                                    <input type="text" size="5" value="<%= f2[4] %>" />
+                                                </td>
+                                                <td>
+                                                    <input type="submit" name="acc" class="btn btn-danger" value="Quitar" />
+                                                </td>
+                                            </form>
+                                        </tr>
+                                        <% } %>
+                                    </table>
 
-                        <table>
-                            <tr>
-                                <td>
-                                    <form action="CompraControl" method="post">
-                                            <input type="hidden" name="cod" value="<%= f3[0] %>"/>
-                                        <input type="submit" name="acc" value="Nuevo" />
-                                        <input type="submit" name="acc" value="Listar" />
-                                        <input type="submit" name="acc" value="Grabar" />
-                                    </form>
-                                </td>
-                                <td>
-                                    Total ==> <input type="text" size="5" value="<%= tot %>" />
-                                </td>
-                            </tr>
-                        </table>
-                        <%= comPre.getMsg() %>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <form action="CompraControl" method="post">
+                                                        <input type="hidden" name="cod" value="<%= f3[0] %>"/>
+                                                    <input type="submit" class="btn btn-primary" name="acc" value="Nuevo" />
+                                                    <input type="submit" class="btn btn-primary mx-2" name="acc" value="Listar" />
+                                                    <input type="submit" class="btn btn-primary" name="acc" value="Grabar" />
+                                                </form>
+                                            </td>
+                                            <td>
+                                                <span class="d-inline-block ml-4 mr-2">Total:</span> <input type="text" size="5" value="<%= tot %>" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    
+                                    
+                                    <div class="row">
+                                        <div class="col-3">
+                                           <p class="my-2 alert-link"><%= comPre.getMsg() %></p>
+                                        </div>
+                                    </div>
 
+                                </div>
+                        </div>
                     </div>
-
                 </main>
 
             </section>

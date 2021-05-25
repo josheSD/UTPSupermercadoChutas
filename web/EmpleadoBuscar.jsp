@@ -363,7 +363,7 @@
                                     <table>
                                         <tr>
                                             <td>Codigo:</td>
-                                            <td><input type="text" class="form-control d-block ml-2" name="cod" size="10"/></td>
+                                            <td><input type="text" class="form-control d-block ml-2" name="cod" placeholder="E001" size="10"/></td>
                                             <td><input type="submit" class="btn btn-primary ml-4" name="acc" value="Buscar"/></td>
                                         </tr>
                                     </table>

@@ -355,48 +355,53 @@
             <section class="l-main" id="main">
                 <main class="l-articulo-lista">
 
-                    <div>
-                        <p>Lista de Articulos</p>
-                        <% ArticuloPresentador artPre = (ArticuloPresentador) session.getAttribute("artPre"); %>
-                        <table>
-                            <tr>
-                                <td>
-                                    Codigo
-                                </td>
-                                <td>
-                                    Nombre
-                                </td>
-                                <td>
-                                    Precio
-                                </td>
-                                <td>
-                                    Stock
-                                </td>
-                                <td></td>
-                            </tr>
-                            <% for(int i=1; i<artPre.getLis().size();i++){ %>
-                            <% Object[]f = (Object[])artPre.getLis().get(i); %>
-                            <tr>
-                                <form action="ArticuloControl" method="post">
-                                    <td>
-                                        <input type="text" size="5" name="cod" value="<%= f[0] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" name="nom" value="<%= f[1] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" name="pre" value="<%= f[2] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" name="sto" value="<%= f[3] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="submit" name="acc" value="Quitar" />
-                                    </td>
-                                </form>
-                            </tr>
-                            <% } %>
-                        </table>
+                    
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-5 py-3">
+                                <p>Lista de Articulos</p>
+                                <% ArticuloPresentador artPre = (ArticuloPresentador) session.getAttribute("artPre"); %>
+                                <table class="table table-hover">
+                                    <tr class="table-primary">
+                                        <td>
+                                            Codigo
+                                        </td>
+                                        <td>
+                                            Nombre
+                                        </td>
+                                        <td>
+                                            Precio
+                                        </td>
+                                        <td>
+                                            Stock
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <% for(int i=1; i<artPre.getLis().size();i++){ %>
+                                    <% Object[]f = (Object[])artPre.getLis().get(i); %>
+                                    <tr>
+                                        <form action="ArticuloControl" method="post">
+                                            <td>
+                                                <input type="text" size="5" name="cod" value="<%= f[0] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" name="nom" value="<%= f[1] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" name="pre" value="<%= f[2] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" name="sto" value="<%= f[3] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="submit" class="btn btn-danger" name="acc" value="Quitar" />
+                                            </td>
+                                        </form>
+                                    </tr>
+                                    <% } %>
+                                </table>
+                            </div>
+                        </div>
                     </div>
                     
                 </main>

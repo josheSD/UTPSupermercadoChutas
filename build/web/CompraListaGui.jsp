@@ -358,48 +358,53 @@
                 <main class="l-compra-lista">
                     
                     
-                    <div>
-                        <p>Lista de Articulos</p>
-                        <% CompraPresentador comPre = (CompraPresentador) session.getAttribute("comPre"); %>
-                        <table>
-                            <tr>
-                                <td>
-                                    Codigo
-                                </td>
-                                <td>
-                                    Nombre
-                                </td>
-                                <td>
-                                    Precio
-                                </td>
-                                <td>
-                                    Cantidad
-                                </td>
-                                <td></td>
-                            </tr>
-                            <% for(int i=1; i<comPre.getLis().size();i++){ %>
-                            <% Object[]f = (Object[])comPre.getLis().get(i); %>
-                            <tr>
-                                <form action="CompraControl" method="post">
-                                    <td>
-                                        <input type="text" size="5" name="cod" value="<%= f[0] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" name="nom" value="<%= f[1] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" name="pre" value="<%= f[2] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" name="can" value="" />
-                                    </td>
-                                    <td>
-                                        <input type="submit" name="acc" value="Agregar" />
-                                    </td>
-                                </form>
-                            </tr>
-                            <% } %>
-                        </table>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-5 py-3">
+                                
+                                <p>Lista de Articulos</p>
+                                <% CompraPresentador comPre = (CompraPresentador) session.getAttribute("comPre"); %>
+                                <table class="table table-hover">
+                                    <tr class="table-primary">
+                                        <td>
+                                            Codigo
+                                        </td>
+                                        <td>
+                                            Nombre
+                                        </td>
+                                        <td>
+                                            Precio
+                                        </td>
+                                        <td>
+                                            Cantidad
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <% for(int i=1; i<comPre.getLis().size();i++){ %>
+                                    <% Object[]f = (Object[])comPre.getLis().get(i); %>
+                                    <tr>
+                                        <form action="CompraControl" method="post">
+                                            <td>
+                                                <input type="text" size="5" name="cod" value="<%= f[0] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" name="nom" value="<%= f[1] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" name="pre" value="<%= f[2] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" name="can" value="" />
+                                            </td>
+                                            <td>
+                                                <input class="btn btn-primary" type="submit" name="acc" value="Agregar" />
+                                            </td>
+                                        </form>
+                                    </tr>
+                                    <% } %>
+                                </table>
+                            </div>
+                        </div>
                     </div>
 
                 </main>

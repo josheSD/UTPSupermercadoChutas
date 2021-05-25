@@ -356,118 +356,127 @@
             <section class="l-main" id="main">
                 <main class="l-pedido">
 
-                    <div>
-                        <p>Nota de Pedido</p>
-                        <% PedidoPresentador pedPre = (PedidoPresentador) session.getAttribute("pedPre"); %>
-                        <%! String tot; %>
-                        <table>
-                            <% Object[]f1 = pedPre.getFil(); %>
-                            <% tot=f1[2].toString(); %>
-                            <tr>
-                                <td>
-                                    Numero
-                                </td>
-                                <td>
-                                    <input type="text" size="10" value='<%= f1[0] %>' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Fecha
-                                </td>
-                                <td>
-                                    <input type="text" size="10" value='<%= f1[1] %>' />
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Empleado
-                                </td>
-                                <td>
-                                    <input type="text" size="10" value='<%= f1[3] %>' />
-                                </td>
-                            </tr>
-                        </table>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-7 py-3">
 
-                        <table>
-                            <% Object[]f3 = pedPre.getFil2(); %>
-                            <tr>
-                                <form action="PedidoControl" method="post">
-                                    <td>Ingrese codigo cliente<td>
-                                    <td><input type="text" name="cod" size="10" value="<%= f3[0] %>"/></td>
-                                    <td><input type="submit" name="acc" value="Buscar" /><td>
-                                    <td>Cliente nombre</td>
-                                    <td><input type="text" name="nom" size="30" value="<%= f3[1] %>" /></td>
-                                </form>
-                            </tr>
-                        </table>
+                                <p class="h5 mb-3">Nota de Pedido</p>
+                                <% PedidoPresentador pedPre = (PedidoPresentador) session.getAttribute("pedPre"); %>
+                                <%! String tot; %>
+                                <table>
+                                    <% Object[]f1 = pedPre.getFil(); %>
+                                    <% tot=f1[2].toString(); %>
+                                    <tr>
+                                        <td>
+                                            Numero
+                                        </td>
+                                        <td>
+                                            <input class="d-inline-block ml-3 mb-3" type="text" size="10" value='<%= f1[0] %>' />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Fecha
+                                        </td>
+                                        <td>
+                                            <input class="d-inline-block ml-3 mb-3" type="text" size="10" value='<%= f1[1] %>' />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Empleado
+                                        </td>
+                                        <td>
+                                            <input class="d-inline-block ml-3" type="text" size="10" value='<%= f1[3] %>' />
+                                        </td>
+                                    </tr>
+                                </table>
 
-                        <table>
-                            <tr>
-                                <td>
-                                    Codigo
-                                </td>
-                                <td>
-                                    Nombre
-                                </td>
-                                <td>
-                                    Precio
-                                </td>
-                                <td>
-                                    Cantidad
-                                </td>
-                                <td>
-                                    Importe
-                                </td>
-                                <td></td>
-                            </tr>
-                            <% for(int i=0;i<pedPre.getLis().size();i++){ %>
-                            <% Object[] f2= (Object[])pedPre.getLis().get(i); %>
-                            <% tot=f2[5].toString(); %>
-                            <tr>
-                                <form action="PedidoControl" method="post">
-                                    <td>
-                                        <input type="text" name="cod" size="5" value="<%= f2[0] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="10" value="<%= f2[1] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" value="<%= f2[2] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" value="<%= f2[3] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="text" size="5" value="<%= f2[4] %>" />
-                                    </td>
-                                    <td>
-                                        <input type="submit" name="acc" value="Quitar" />
-                                    </td>
-                                </form>
-                            </tr>
-                            <% } %>
-                        </table>
+                                <table class="mt-3">
+                                    <% Object[]f3 = pedPre.getFil2(); %>
+                                    <tr>
+                                        <form action="PedidoControl" method="post">
+                                            <td>Ingrese codigo cliente<td>
+                                            <td><input class="ml-2" placeholder="C001" type="text" name="cod" size="10" value="<%= f3[0] %>"/></td>
+                                            <td><input class="d-inline-block btn mx-3 btn-primary" type="submit" name="acc" value="Buscar" /><td>
+                                            <td>Cliente nombre</td>
+                                            <td><input class="ml-2" type="text" name="nom" size="30" value="<%= f3[1] %>" /></td>
+                                        </form>
+                                    </tr>
+                                </table>
 
-                        <table>
-                            <tr>
-                                <td>
-                                    <form action="PedidoControl" method="post">
-                                            <input type="hidden" name="cod" value="<%= f3[0] %>"/>
-                                        <input type="submit" name="acc" value="Nuevo" />
-                                        <input type="submit" name="acc" value="Listar" />
-                                        <input type="submit" name="acc" value="Grabar" />
-                                    </form>
-                                </td>
-                                <td>
-                                    Total ==> <input type="text" size="5" value="<%= tot %>" />
-                                </td>
-                            </tr>
-                        </table>
-                        <%= pedPre.getMsg() %>
+                                <table class="table table-hover mt-4 mb-3">
+                                    <tr class="table-primary">
+                                        <td>
+                                            Codigo
+                                        </td>
+                                        <td>
+                                            Nombre
+                                        </td>
+                                        <td>
+                                            Precio
+                                        </td>
+                                        <td>
+                                            Cantidad
+                                        </td>
+                                        <td>
+                                            Importe
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                    <% for(int i=0;i<pedPre.getLis().size();i++){ %>
+                                    <% Object[] f2= (Object[])pedPre.getLis().get(i); %>
+                                    <% tot=f2[5].toString(); %>
+                                    <tr>
+                                        <form action="PedidoControl" method="post">
+                                            <td>
+                                                <input type="text" name="cod" size="5" value="<%= f2[0] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="10" value="<%= f2[1] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" value="<%= f2[2] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" value="<%= f2[3] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="text" size="5" value="<%= f2[4] %>" />
+                                            </td>
+                                            <td>
+                                                <input type="submit" name="acc" class="btn btn-danger" value="Quitar" />
+                                            </td>
+                                        </form>
+                                    </tr>
+                                    <% } %>
+                                </table>
 
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <form action="PedidoControl" method="post">
+                                                    <input type="hidden" name="cod" value="<%= f3[0] %>"/>
+                                                <input type="submit" class="btn btn-primary" name="acc" value="Nuevo" />
+                                                <input type="submit" class="btn btn-primary mx-2" name="acc" value="Listar" />
+                                                <input type="submit" class="btn btn-primary" name="acc" value="Grabar" />
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <span class="d-inline-block ml-4 mr-2">Total:</span> <input type="text" size="5" value="<%= tot %>" />
+                                        </td>
+                                    </tr>
+                                </table>
+                                        
+                                <div class="row">
+                                    <div class="col-3">
+                                        <p class="my-2 alert-link"><%= pedPre.getMsg() %></p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
                     </div>
-
                 </main>
 
             </section>

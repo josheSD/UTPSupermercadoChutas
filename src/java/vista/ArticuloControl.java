@@ -34,7 +34,12 @@ public class ArticuloControl extends HttpServlet {
                 String sto = request.getParameter("sto");
                 
                 artSer.grabar(cod, nom, pre, sto);
-                response.sendRedirect("Admin.jsp");
+                
+                artPre = new ArticuloPresentador();
+                artPre.setLis(artSer.listarArticulos());
+                request.getSession().setAttribute("artPre", artPre);
+                response.sendRedirect("ArticuloLista.jsp");
+                
             }
             
             if(acc.equals("Listar")){

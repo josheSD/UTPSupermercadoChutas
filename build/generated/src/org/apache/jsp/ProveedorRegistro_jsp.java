@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class EmpleadoRegistro_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class ProveedorRegistro_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -47,14 +47,13 @@ public final class EmpleadoRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Empleado Registro | Supermercado Tick</title>\n");
+      out.write("        <title>Proveedor Registro | Supermercado Tick</title>\n");
       out.write("        <style>@import\"./assets/css/styles.css\";</style>\n");
       out.write("        <style>@import\"./assets/css/components/login.css\";</style>\n");
       out.write("        <link rel=\"icon\" type=\"image/x-icon\" href=\"./assets/img/tick.png\">\n");
       out.write("        <meta name=\"theme-color\" content=\"#0078D7\">\n");
       out.write("        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'/>\n");
       out.write("        <script src=\"https://kit.fontawesome.com/2fb25d77eb.js\" crossorigin=\"anonymous\"></script>\n");
-      out.write("        \n");
       out.write("        \n");
       out.write("        <!-- BOOSTSTRAP -->\n");
       out.write("        <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css\" integrity=\"sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l\" crossorigin=\"anonymous\">\n");
@@ -69,7 +68,7 @@ public final class EmpleadoRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("            <section class=\"l-auth__hero\">\n");
       out.write("\n");
       out.write("                <article class=\"l-auth__hero-top\"></article>\n");
-      out.write("                <article class=\"l-auth__hero-top-left\"> <img src=\"./assets/img/tick.png\"> </article>\n");
+      out.write("                <article class=\"l-auth__hero-top-left\"> <img src=\"./assets/img/tick.png\"> </article> \n");
       out.write("                <article class=\"l-auth__hero-bottom\"></article>\n");
       out.write("\n");
       out.write("            </section>\n");
@@ -100,19 +99,19 @@ public final class EmpleadoRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("\n");
       out.write("                    <section class=\"l-login__title\">\n");
       out.write("\n");
-      out.write("                        <h1> Registrar Empleado </h1>\n");
+      out.write("                        <h1> Registrar Proveedor </h1>\n");
       out.write("\n");
       out.write("                    </section>\n");
       out.write("\n");
       out.write("                    <section class=\"l-login__content\">\n");
       out.write("\n");
-      out.write("                        <form method=\"post\" action=\"EmpleadoControl\" >\n");
+      out.write("                        <form method=\"post\" action=\"ProveedorControl\" >\n");
       out.write("                            <div class=\"container\">\n");
       out.write("                                <div class=\"row\">\n");
       out.write("                                    <div class=\"col-12 px-0\">\n");
       out.write("                                        <div class=\"form-group\">\n");
       out.write("                                            <label class=\"formGroupExampleInput\" for=\"cod\">Codigo</label>\n");
-      out.write("                                            <input placeholder=\"E001\" id=\"cod\" name=\"cod\" type=\"text\" class=\"form-control\">\n");
+      out.write("                                            <input placeholder=\"P001\" id=\"cod\" name=\"cod\" type=\"text\" class=\"form-control\">\n");
       out.write("                                        </div>\n");
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
@@ -127,8 +126,8 @@ public final class EmpleadoRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                <div class=\"row\">\n");
       out.write("                                    <div class=\"col-12 px-0\">\n");
       out.write("                                        <div class=\"form-group\">\n");
-      out.write("                                            <label clas=\"formGroupExampleInput\" for=\"tip\">Tipo</label>\n");
-      out.write("                                            <input id=\"tip\" name=\"tip\" type=\"text\" class=\"form-control\">\n");
+      out.write("                                            <label class=\"formGroupExampleInput\" for=\"dir\">Dirección</label>\n");
+      out.write("                                            <input id=\"dir\" name=\"dir\" type=\"text\" class=\"form-control\">\n");
       out.write("                                        </div>\n");
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
@@ -138,7 +137,6 @@ public final class EmpleadoRegistro_jsp extends org.apache.jasper.runtime.HttpJs
       out.write("                                            <label class=\"formGroupExampleInput\" for=\"usu\">Usuario</label>\n");
       out.write("                                            <input id=\"usu\" name=\"usu\" type=\"text\" class=\"form-control\">\n");
       out.write("                                        </div>\n");
-      out.write("                                        \n");
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"row\">\n");

@@ -360,22 +360,22 @@
                     <section class="l-articulo__content">
 
                         <form method="post" action="ArticuloControl" >
-                            <div class="container">
+                            <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-12 px-0">
+                                    <div class="col-12 pt-3 pb-2">
                                         <h4> Registrar Articulo </h4>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 px-0">
+                                    <div class="col-md-2 px-3">
                                         <div class="form-group">
                                             <label class="formGroupExampleInput" for="cod">Codigo</label>
-                                            <input id="cod" name="cod" type="text" class="form-control">
+                                            <input placeholder="A001" id="cod" name="cod" type="text" class="form-control">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 px-0">
+                                    <div class="col-md-2 px-3">
                                         <div class="form-group">
                                             <label class="formGroupExampleInput" for="nom">Nombre</label>
                                             <input id="nom" name="nom" type="text" class="form-control">
@@ -383,7 +383,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 px-0">
+                                    <div class="col-md-2 px-3">
                                         <div class="form-group">
                                             <label class="formGroupExampleInput" for="pre">Precio</label>
                                             <input id="pre" name="pre" type="text" class="form-control">
@@ -391,7 +391,7 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 px-0">
+                                    <div class="col-md-2 px-3">
                                         <div class="form-group">
                                             <label class="formGroupExampleInput" for="sto">Stock</label>
                                             <input id="sto" name="sto" type="text" class="form-control">
@@ -399,8 +399,8 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-12 px-0">
-                                        <input type="submit" class="btn btn-primary" placeholder="Crear" name="acc" value="Grabar" />
+                                    <div class="col-md-2 px-3">
+                                        <input type="submit" class="btn btn-primary mt-2" placeholder="Crear" name="acc" value="Grabar" />
                                     </div>
                                 </div>
                             </div>

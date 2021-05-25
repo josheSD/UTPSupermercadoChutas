@@ -1,17 +1,32 @@
 
 document.addEventListener("DOMContentLoaded", function(event) {
     
-    // Your code to run since DOM is loaded and ready
-    console.log('READY');
+    
+    var localTheme = localStorage.getItem("theme");
+
+    if(localTheme == 'dark'){
+        body.classList.remove('theme-light');
+        body.classList.add('theme-dark');
+    }else{
+        body.classList.remove('theme-dark');
+        body.classList.add('theme-light');
+    }
+    
     document.getElementById('check-theme').addEventListener("click",() =>{
+        
         var body = document.getElementById('body');
-        if(body.classList.contains('theme-dark')){
-          body.classList.remove('theme-dark');
-          body.classList.add('theme-light');
+        var localTheme = localStorage.getItem("theme");
+    
+        if(localTheme == 'dark'){
+            body.classList.remove('theme-dark');
+            body.classList.add('theme-light');
+            localStorage.setItem("theme","light");
         }else{
-          body.classList.remove('theme-light');
-          body.classList.add('theme-dark');
+            body.classList.remove('theme-light');
+            body.classList.add('theme-dark');
+            localStorage.setItem("theme","dark");
         }
+        
     });
     
     document.getElementById('user-photo').addEventListener("click",() =>{
